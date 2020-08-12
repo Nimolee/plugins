@@ -437,7 +437,7 @@ FourCharCode const videoFormat = kCVPixelFormatType_32BGRA;
     CFRetain(sampleBuffer);
     CMTime currentSampleTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
 
-    CMTime startingTimeDelay = CMTimeMakeWithSeconds(0.05, 1000000000);
+    CMTime startingTimeDelay = CMTimeMakeWithSeconds(0.5, 1000000000);
     CMTime startTimeToUse = CMTimeAdd(currentSampleTime, startingTimeDelay);
 
     if (_videoWriter.status != AVAssetWriterStatusWriting) {
